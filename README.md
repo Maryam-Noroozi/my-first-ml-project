@@ -50,6 +50,41 @@ Random Forest outperformed Linear Regression, likely due to its ability to captu
 - Hyperparameter tuning for Random Forest
 - Generate predictions on the Kaggle test set for submission
 
+---
+## German Sentiment Analysis 🇩🇪
+
+A fine-tuned BERT model that classifies German text reviews as positive or negative, built using Hugging Face Transformers.
+
+### Project Overview
+
+This project fine-tunes bert-base-german-cased on a German subset of a multilingual Amazon reviews dataset to perform binary sentiment classification.
+
+Workflow:
+1. Loading and filtering a multilingual dataset for German-language reviews
+2. Tokenizing text using a German BERT tokenizer
+3. Fine-tuning bert-base-german-cased for sequence classification
+4. Evaluating model performance on a held-out test set
+
+### Results
+
+- Test Accuracy: 93.95%
+- Test Loss: 0.215
+
+### Tech Stack
+
+- Python, PyTorch
+- Hugging Face transformers & datasets
+- Google Colab (GPU-accelerated training)
+
+### Model
+
+The fine-tuned model is available in the [`my_model`](./my_model) directory and can be loaded directly with:
+
+```python
+from transformers import AutoModelForSequenceClassification, AutoTokenizer
+
+model = AutoModelForSequenceClassification.from_pretrained("./my_model")
+tokenizer = AutoTokenizer.from_pretrained("./my_model")
 ## Author
 
 Maryam Noroozi
