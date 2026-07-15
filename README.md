@@ -85,6 +85,8 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
 model = AutoModelForSequenceClassification.from_pretrained("./my_model")
 tokenizer = AutoTokenizer.from_pretrained("./my_model")
+
+
 ## Author
 
 Maryam Noroozi
